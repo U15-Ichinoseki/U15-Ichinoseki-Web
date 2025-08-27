@@ -38,6 +38,8 @@
                         </button>
                         <ul id="dropdown-menu"
                             class="absolute top-10 -right-4 w-40 mt-2 p-2 hidden bg-white text-gray-800 text-lg xl:text-xl xl:w-44 rounded-lg border-2 border-white">
+                            <li><a href="#CHaser" class="dropdown-link block px-4 py-2 hover:bg-gray-100">CHaserとは</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -48,13 +50,56 @@
                 <li class="text-3xl font-bold text-center mb-8">
                     <h2>競技部門</h2>
                 </li>
+                <li><a href="#CHaser" class="mobile-link">CHaserとは</a></li>
             </ul>
         </div>
     </header>
 
     <main class="bg-white">
-
-
+        <!-- CHaser Section -->
+        <section id="CHaser" class="py-20 px-8">
+            <div class="container">
+                <h2 class="text-4xl font-bold text-center mb-12">CHaserとは</h2>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <div class="bg-white rounded-xl p-8 hover-card flex flex-col gap-6">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-2">CHaser概要</h3>
+                        <p>CHaserは、対戦型ゲームプラットフォーム上で動作する自律型プログラムによる競技です。
+                            プレイヤーはプログラムを作成し、アイテムを集めたり、相手をブロックで囲んだりして勝利を目指します。
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-8 hover-card flex flex-col gap-6">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-2">プログラミングの基本</h3>
+                        <p>CHaserでは、以下のような命令を使ってプレイヤーを操作します。</p>
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div class="bg-blue-50 p-4 rounded-lg border">
+                                <h4 class="font-semibold text-blue-600">移動</h4>
+                                <code class="block mt-2 text-sm text-gray-700">player.walk(Up)</code>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg border">
+                                <h4 class="font-semibold text-blue-600">ブロック設置</h4>
+                                <code class="block mt-2 text-sm text-gray-700">player.put(Down)</code>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-blue-600 mt-6">周辺情報の活用</h4>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li><code>map_info[Up] == Item</code>：上のマスにアイテムがある</li>
+                            <li><code>map_info[Right] == Enemy</code>：右のマスに相手がいる</li>
+                            <li><code>look_info = player.look(Right)</code>：右方向の近隣探査</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-8 hover-card flex flex-col gap-6">
+                    <h3 class="text-2xl font-bold text-blue-700 mb-2">応用戦略</h3>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li>遠方探査でアイテムの位置を予測</li>
+                        <li>障害物を回避しながら移動</li>
+                        <li>ランダム移動で自滅を防止</li>
+                        <li>相手の位置を推定してブロック設置</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- CHaser Section End -->
     </main>
 
     <!-- Contact Section -->
