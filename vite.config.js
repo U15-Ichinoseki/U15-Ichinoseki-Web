@@ -4,4 +4,12 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        top: 'index.html',
+        competition: 'competition.html',
+      },
+    },
+  },
 })
