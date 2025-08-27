@@ -145,6 +145,12 @@
   ol, ul, menu {
     list-style: none;
   }
+  ul.list-disc {
+    list-style: disc; /* または 'inside' や 'outside' を追加して位置調整 */
+    list-style-position: outside;
+    margin-left: 1.5em; /* 必要に応じて調整 */
+  }
+
   img, svg, video, canvas, audio, iframe, embed, object {
     display: block;
     vertical-align: middle;
