@@ -1362,6 +1362,14 @@ h2 {
       }
     }
   }
+  .link-button.custom-color {
+    background-color: var(--color-yellow-600);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-yellow-500);
+      }
+    }
+  }
   .a-link {
     position: absolute;
     bottom: calc(var(--spacing) * 0);
