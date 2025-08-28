@@ -5,11 +5,19 @@ topicsSection.innerHTML = `
   <div class="container">
     <h2 class="text-4xl font-bold text-center mb-12">更新情報</h2>
     <div class="space-y-4">
+      <!-- 他の更新情報もここに追加 -->
+
       <a href="#schedule" class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
         <p class="text-sm text-gray-500 mb-1">2025.08.25</p>
         <p class="text-lg font-semibold text-gray-800">エントリー受付開始しました</p>
       </a>
-      <!-- 他の更新情報もここに追加 -->
+
+      <a href="#schedule" class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+          <p class="text-sm text-gray-500 mb-1">2025.05.30</p>
+          <p class="text-lg font-semibold text-gray-800">第４回大会の実施が決定しました</p>
+          <p class="text-lg  text-gray-800">11月９日（日）開催<br>８月25日（月）エントリー受付開始</p>
+      </a>
+      
     </div>
   </div>
 `;
