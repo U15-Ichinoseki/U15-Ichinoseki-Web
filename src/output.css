@@ -1,5 +1,6 @@
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import "tailwindcss";
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
