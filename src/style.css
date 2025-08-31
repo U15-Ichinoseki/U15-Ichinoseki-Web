@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+h2 {
+    padding-bottom: 5px;
+    border-bottom: 4px solid rgb(142, 197, 255);
+}
+
+@theme {
+    --animate-down-up-1: down-up-1 1s ease-out forwards;
+
+    @keyframes down-up-1 {
+
+        0%,
+        10% {
+            transform: translateY(-100%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    --animate-down-up-2: down-up-2 1s ease-in-out forwards;
+
+    @keyframes down-up-2 {
+
+        0%,
+        10% {
+            transform: translateY(-500%);
+        }
+
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+    --animate-fade-in-up: fade-in-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+
+    @keyframes fade-in-up {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0%);
+        }
+    }
+
+    --animate-scale-up: scale-up 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+
+    @keyframes scale-up {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+}
+
+@layer components {
+    .main-theme {
+        @apply bg-gradient-to-r from-blue-300 to-indigo-500;
+    }
+
+    .hero-bg {
+        @apply bg-[url(./images/hero-bg.png)] bg-cover bg-right sm:bg-center;
+    }
+
+    .hamburger {
+        @apply w-14 h-14 border-black border-[3px] rounded-full z-50 relative flex justify-center items-center cursor-pointer scale-[80%];
+    }
+
+    .bar {
+        @apply h-0.75 w-[30px] relative bg-black transition-all duration-300;
+    }
+
+    .bar::before {
+        @apply absolute content-[''] -top-2 h-0.75 w-full left-0 bg-black transition-all duration-300;
+    }
+
+    .bar::after {
+        @apply absolute content-[''] top-2 h-0.75 w-full left-0 bg-black transition-all duration-300;
+    }
+
+    .hamburger.active .bar::before {
+        @apply -top-0;
+    }
+
+    .hamburger.active .bar::after {
+        @apply top-0;
+    }
+
+    .mobile-menu {
+        @apply fixed sm:hidden -z-10 inset-0 top-0 left-0 w-full h-full text-gray-800 transform translate-x-full transition-transform duration-300 flex flex-col items-center pt-30 text-xl font-semibold;
+    }
+
+    .mobile-menu.active {
+        @apply translate-x-0;
+    }
+
+    .link-button {
+        @apply bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-500 transition-all duration-300 transform hover:scale-105;
+    }
+
+    .a-link {
+        @apply absolute bottom-0 left-0 h-0.5 bg-blue-500 w-0 transition-all duration-300 ease-in-out group-hover:w-full;
+    }
+
+    .hover-card {
+        @apply shadow-lg shadow-blue-400/50 hover:shadow-2xl transition-shadow duration-300;
+    }
+
+    .contact {
+        @apply flex items-center gap-6 p-4 rounded-lg hover:bg-gray-700 transition-colors duration-200 cursor-pointer;
+    }
+}
+
+@layer utilities {
+    .container {
+        @apply mx-auto md:max-w-4xl;
+    }
+}
