@@ -8,6 +8,13 @@ topicsSection.innerHTML = `
       <!-- 他の更新情報もここに追加 -->
 
       <a href="#schedule" class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
+        <p class="text-sm text-gray-500 mb-1">2025.09.04</p>
+        <p class="text-lg font-semibold text-gray-800">事前講習会（Tri・I）の受付を締め切りました</p>
+          <p class="text-lm  text-gray-800">たくさんの応募ありがとうございます</p>
+          <p class="text-lm  text-gray-800">大会エントリーは引き続き受付中です</p>
+      </a>
+
+      <a href="#schedule" class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition">
         <p class="text-sm text-gray-500 mb-1">2025.08.25</p>
         <p class="text-lg font-semibold text-gray-800">エントリー受付開始しました</p>
           <p class="text-lm  text-gray-800">９月17日（水）受付締切です</p>
