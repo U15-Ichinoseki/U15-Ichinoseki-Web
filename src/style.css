@@ -75,7 +75,7 @@ h2 {
     }
 
     .hero-bg {
-        @apply bg-[url(./images/hero-bg.png)] bg-cover bg-right sm:bg-center;
+        @apply bg-[url(/images/hero-bg.png)] bg-cover bg-right sm:bg-center;
     }
 
     .hamburger {
