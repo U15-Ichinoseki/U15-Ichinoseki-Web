@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         top: 'index.html',
         competition: 'competition.html',
+        creation: 'creation.html',
       },
     },
   },
