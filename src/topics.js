@@ -8,7 +8,8 @@ function topicItemHTML(topic, extraClass = '') {
   `;
 }
 
-fetch('./topics.json')
+
+fetch(`/topics/${window.topics || "2026"}.json`)
   .then(response => response.json())
   .then(topics => {
     topics.sort((a, b) => {
